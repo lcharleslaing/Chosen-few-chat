@@ -11,15 +11,15 @@
 </script>
 
 <header>
-  <h1>CF Chat</h1>
+  <h2 class="text-2xl">CF💬</h2>
   {#if $username}
     <div class="user-bio">
       <span>Hello <strong class="uppercase">{$username}</strong></span>
     </div>
 
-    <button class="signout-button" on:click={signout}>Sign Out</button>
+    <button class="btn btn-md btn-primary" on:click={signout}>Sign Out</button>
   {:else}
-    <h3>Gun.js Chat</h3>
+    <h2 class="text-2xl">CF💬</h2>
   {/if}
 </header>
 
@@ -29,7 +29,7 @@
   }
 
   .user-bio {
-    font-size: x-large;
+    font-size: large;
     display: flex;
     align-items: center;
     justify-content: center;

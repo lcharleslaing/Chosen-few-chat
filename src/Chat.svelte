@@ -89,17 +89,21 @@
     </main>
 
     <form on:submit|preventDefault={sendMessage}>
-      <input
-        type="text"
-        placeholder="Type a message..."
+      <textarea
         bind:value={newMessage}
-        maxlength="100"
-      />
+        class="textarea textarea-bordered w-full"
+        placeholder="Bio"
+        maxlength="1000"
+        rows="3"
+      ></textarea>
 
-      <button type="submit" disabled={!newMessage}>Send</button>
+      <button
+        class="btn h-full bg-slate-500 text-slate-100 hover:bg-green-500 hover:text-black"
+        type="submit">Send</button
+      >
     </form>
 
-    <!-- {#if !canAutoScroll}
+    {#if !canAutoScroll}
       <div class="scroll-button">
         <button on:click={autoScroll} class:red={unreadMessages}>
           {#if unreadMessages}
@@ -109,7 +113,7 @@
           Unread
         </button>
       </div>
-    {/if} -->
+    {/if}
   {:else}
     <main>
       <Login />
